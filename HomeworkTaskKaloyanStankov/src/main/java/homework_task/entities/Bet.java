@@ -22,11 +22,14 @@ public class Bet {
 
     private BigDecimal winAmount;
 
-    public Bet(Player playerId, BigDecimal betAmount, boolean isWin, BigDecimal winAmount) {
+    private int outcome;
+
+    public Bet(Player playerId, BigDecimal betAmount, boolean isWin, BigDecimal winAmount, int outcome) {
         this.playerId = playerId;
         this.betAmount = betAmount;
         this.isWin = isWin;
         this.winAmount = winAmount;
+        this.outcome = outcome;
     }
 
     public Bet() {
@@ -70,5 +73,13 @@ public class Bet {
 
     public void setWinAmount(BigDecimal winAmount) {
         this.winAmount = winAmount;
+    }
+
+    public int getOutcome() {
+        return outcome;
+    }
+
+    public void setOutcome(int outcome) {
+        this.outcome = outcome;
     }
 }

@@ -1,9 +1,9 @@
 package homework_task.exceptionhandler;
 
-public class PlayerExistException extends Exception {
+public class CommandNotFoundException extends Exception {
     private String message;
 
-    public PlayerExistException(String message) {
+    public CommandNotFoundException(String message) {
         this.message = message;
     }
 

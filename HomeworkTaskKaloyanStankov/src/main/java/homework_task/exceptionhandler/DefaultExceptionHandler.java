@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class DefaultExceptionHandler {
 
     @ExceptionHandler(PlayerExistException.class)
-     public ResponseEntity<String> playerExists(final PlayerExistException e) {
+    public ResponseEntity<String> playerExists(final PlayerExistException e) {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
@@ -23,5 +23,14 @@ public class DefaultExceptionHandler {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(GameTypeNotFoundException.class)
+    public ResponseEntity<String> gameTypeNotFoundException(final GameTypeNotFoundException e) {
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(CommandNotFoundException.class)
+    public ResponseEntity<String> commandNotFoundException(final CommandNotFoundException e) {
+        return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+    }
 
 }
