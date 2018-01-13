@@ -1,9 +1,9 @@
 package homework_task.services;
 
 import homework_task.entities.Player;
-import homework_task.exceptionhandler.PlayerExistException;
-import homework_task.models.AuthenticationDTO;
-import homework_task.models.Constants;
+import homework_task.exceptions.PlayerExistException;
+import homework_task.dtos.AuthenticationDTO;
+import homework_task.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;

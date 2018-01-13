@@ -19,6 +19,8 @@ public class Player {
     @Column(nullable = false)
     private BigDecimal balance;
 
+    private String token;
+
 
     public Player(String uniqueId, String playerName, String password) {
         this.uniqueId = uniqueId;
@@ -60,5 +62,13 @@ public class Player {
 
     public void setBalance(BigDecimal balance) {
         this.balance = balance;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

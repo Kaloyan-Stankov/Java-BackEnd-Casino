@@ -3,30 +3,29 @@ package homework_task.entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.math.BigDecimal;
 
 @Entity
 public class WinCoefficient {
 
     @Id
-    private byte winningNumber;
+    private int winningNumber;
 
     @Column(nullable = false)
-    private BigDecimal winningCoefficient;
+    private Double winningCoefficient;
 
-    public byte getWinningNumber() {
+    public int getWinningNumber() {
         return winningNumber;
     }
 
-    public void setWinningNumber(byte winningNumber) {
+    public void setWinningNumber(int winningNumber) {
         this.winningNumber = winningNumber;
     }
 
-    public BigDecimal getWinningCoefficient() {
+    public Double getWinningCoefficient() {
         return winningCoefficient;
     }
 
-    public void setWinningCoefficient(BigDecimal winningCoefficient) {
+    public void setWinningCoefficient(Double winningCoefficient) {
         this.winningCoefficient = winningCoefficient;
     }
 }
